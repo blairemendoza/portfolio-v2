@@ -9,3 +9,10 @@
 .dark ::selection {
   @apply bg-primary-dark text-surface-low-dark
 }
+
+@layer utilities {
+  .gradient-mask {
+    mask-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.2007003484987745) 70%, rgba(255,255,255,0) 100%);
+    -webkit-mask-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.2007003484987745) 70%, rgba(255,255,255,0) 100%);
+  }
+}

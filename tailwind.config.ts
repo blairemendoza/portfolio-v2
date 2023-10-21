@@ -1,5 +1,8 @@
 import type { Config } from 'tailwindcss'
 
+// Font size clamp generator: https://clamp.font-size.app/
+// Min viewport: 500px; Max viewport: 2500px
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,14 +13,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary-light': '#263C74',
-        'primary-dark': '#9DB5F1',
-        'secondary-light': '#4D67A8',
-        'secondary-dark': '#C0CBE5',
-        'surface-low-light': '#ECF2FE',
-        'surface-low-dark': '#0F172A',
-        'surface-high-light': '#D5E0FB',
-        'surface-high-dark': '#16213A',
+        'primary-light': '#11367E',
+        'primary-dark': '#DBE1FF',
+        'secondary-light': '#3A5DA1',
+        'secondary-dark': '#B3C5FF',
+        'surface-low-light': '#B0C6F0',
+        'surface-low-dark': '#001849',
+        'surface-high-light': '#91B0EB',
+        'surface-high-dark': '#002B75',
       },
       fontFamily: {
         'body': 'var(--font-body)',
@@ -38,9 +41,12 @@ const config: Config = {
           lineHeight: '1.3em',
           fontWeight: '700',
         }],
-        'body': ['clamp(1rem, 0.9063rem + 0.3vw, 1.375rem)', {
+        'body': ['clamp(1.125rem, 1.0313rem + 0.3vw, 1.5rem)', {
           lineHeight: '1.6em',
         }]
+      },
+      gridTemplateColumns: {
+        'hero-subtitle': '1fr min(65ch, 100%) 1fr'
       },
     },
   },
