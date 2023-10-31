@@ -19,10 +19,13 @@ export default function ThemeToggle() {
   }
 
   return (
-    <div className="relative z-10">
-      <button className="theme-toggle" onClick={handleTheme}>
-        Theme
-      </button>
-    </div>
+    <button
+      className="flex items-center justify-center h-full w-full hover:scale-110 dark:rotate-180 rounded-full transition-all duration-300"
+      onClick={handleTheme}
+    >
+      <div className="flex items-center justify-center h-theme-button w-theme-button outline outline-2 -outline-offset-2 outline-secondary-light dark:outline-secondary-dark rounded-full">
+        <div className="h-full w-full bg-secondary-light dark:bg-secondary-dark theme-toggle-inner-mask rounded-full"></div>
+      </div>
+    </button>
   );
 }
