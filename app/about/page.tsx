@@ -1,3 +1,5 @@
+"use client"
+
 import Hero from "@/components/home/hero/Hero";
 import WorksSnippet from "@/components/home/featured/Featured";
 
