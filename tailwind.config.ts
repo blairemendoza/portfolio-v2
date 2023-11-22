@@ -44,8 +44,9 @@ const config: Config = {
           lineHeight: '1.3em',
           fontWeight: '700',
         }],
-        'body': ['clamp(1.125rem, 0.9688rem + 0.5vw, 1.75rem)', {
+        base: ['clamp(1rem, 0.8906rem + 0.35vw, 1.4375rem)', {
           lineHeight: '1.6em',
+          letterSpacing: '-0.025ch',
         }],
         'link': ['clamp(0.9375rem, 0.8906rem + 0.15vw, 1.125rem)', {
           letterSpacing: '0.04ch',

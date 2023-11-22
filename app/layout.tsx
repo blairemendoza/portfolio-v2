@@ -2,14 +2,15 @@
 
 import "./globals.css";
 import { Providers } from "./providers";
-import { Gabarito } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import localFont from "next/font/local";
-import ThemeToggle from "@/components/navigation/ThemeToggle";
+import { usePathname } from "next/navigation";
 import Aura from "@/components/background/Aura";
+import Navbar from "@/components/navigation/Navbar";
 
-const bodyFont = Gabarito({
+const bodyFont = DM_Sans({
   variable: "--font-body",
-  weight: ["400", "700"],
+  weight: ["500", "600", "700", "800"],
   subsets: ["latin"],
   display: "swap",
   fallback: ["system-ui"],
@@ -36,19 +37,48 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Dynamic page title
+  const pathName = usePathname();
+  const pathSplit = pathName.split("/");
+  let title = "";
+  if (pathSplit.length > 2) {
+    const formattedTitle = pathSplit[2]
+      .split("-")
+      .map((word) => word[0].toUpperCase() + word.slice(1))
+      .join(" ");
+    title = `${formattedTitle}`;
+  } else {
+    title =
+      pathName === "/"
+        ? "Web Developer"
+        : pathName === "/about"
+        ? "About"
+        : pathName === "/works"
+        ? "Works"
+        : pathName === "/contact"
+        ? "Contact"
+        : "Web Developer";
+  }
+
   return (
     <html
       lang="en"
       className={`${bodyFont.variable} ${displayFont.variable}`}
       suppressHydrationWarning
     >
-      <head></head>
+      <head>
+        <title>{`Blaire Mendoza • ` + title}</title>
+        <meta
+          name="keywords"
+          content="Portfolio, Web Development, React, Next.js, TypeScript, UI/UX Design, Frontend Development"
+        />
+      </head>
       <body
-        className={`font-body bg-surface-low-light dark:bg-surface-low-dark text-primary-light dark:text-primary-dark transition`}
+        className={`font-body bg-surface-low-light dark:bg-surface-low-dark text-primary-light dark:text-primary-dark transition duration-400`}
       >
         <Providers>
           <Aura />
-          <ThemeToggle />
+          <Navbar />
           {children}
         </Providers>
       </body>

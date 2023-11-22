@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { motion as m, useMotionValueEvent, useScroll } from "framer-motion";
 import { navLinks } from "@/constants";
 import ThemeToggle from "@/components/navigation/ThemeToggle";
-import { Span } from "next/dist/trace";
 
 const navbarAnimation = {
   initial: { opacity: 0 },
@@ -41,7 +40,7 @@ export default function Navbar() {
         <ul
           className={`flex flex-row gap:0 md:gap-3 h-full list-none p-1.5 md:p-2 rounded-full transition-all ${
             isScrolled
-              ? "bg-surface-high-light dark:bg-surface-high-dark shadow-sm"
+              ? "bg-surface-high-light dark:bg-surface-high-dark drop-shadow-sm"
               : ""
           }`}
         >
@@ -93,9 +92,7 @@ export default function Navbar() {
         </ul>
         <div
           className={`md:absolute md:top-0 md:right-8 flex items-center justify-center h-full w-14 md:w-16 p-1.5 md:p-2 ml-3 rounded-full transition-all duration-200 ${
-            isScrolled
-              ? "bg-surface-high-light dark:bg-surface-high-dark shadow-sm"
-              : ""
+            isScrolled ? "bg-surface-high-light dark:bg-surface-high-dark" : ""
           }`}
         >
           <ThemeToggle />

@@ -6,7 +6,7 @@
   :root {
     --primary-light: 17 54 126;
     --primary-dark: 219 225 255;
-    --secondary-light: 58 93 161;
+    --secondary-light: 54 87 152;
     --secondary-dark: 179 197 255;
     --surface-low-light: 195 226 245;
     --surface-low-dark: 1 35 64;
@@ -20,6 +20,10 @@
   
   .dark ::selection {
     @apply bg-primary-dark text-surface-low-dark
+  }
+
+  *:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-primary-light dark:outline-white
   }
 }
 
