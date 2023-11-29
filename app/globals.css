@@ -4,14 +4,14 @@
 
 @layer base {
   :root {
-    --primary-light: 17 54 126;
-    --primary-dark: 219 225 255;
-    --secondary-light: 54 87 152;
-    --secondary-dark: 179 197 255;
-    --surface-low-light: 195 226 245;
-    --surface-low-dark: 1 35 64;
-    --surface-high-light: 222 241 253;
-    --surface-high-dark: 5 50 87;
+    --primary-light: 108 108 39;
+    --primary-dark: 226 227 136;
+    --secondary-light: 130 130 36;
+    --secondary-dark: 207 207 155;
+    --surface-low-light: 255 247 236;
+    --surface-low-dark: 39 39 30;
+    --surface-high-light: 230 228 191;
+    --surface-high-dark: 64 64 41;
   }
 
   ::selection {

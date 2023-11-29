@@ -40,7 +40,7 @@ export default function Navbar() {
         <ul
           className={`flex flex-row gap:0 md:gap-3 h-full list-none p-1.5 md:p-2 rounded-full transition-all ${
             isScrolled
-              ? "bg-surface-high-light dark:bg-surface-high-dark drop-shadow-sm"
+              ? "bg-surface-high-light/80 dark:bg-surface-high-dark/80 backdrop-blur-xl"
               : ""
           }`}
         >
@@ -60,7 +60,7 @@ export default function Navbar() {
                       ? "text-surface-high-light dark:text-surface-high-dark"
                       : activeLink?.path === link.path
                       ? "text-primary-light dark:text-primary-dark"
-                      : "opacity-60"
+                      : "opacity-70"
                     : (
                         currentPath !== "/"
                           ? link.path !== "" && currentPath.includes(link.path)

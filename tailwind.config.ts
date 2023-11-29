@@ -61,6 +61,7 @@ const config: Config = {
       },
       gridTemplateColumns: {
         'hero-subtitle': '1fr min(65ch, 100%) 1fr',
+        '20': 'repeat(20, minmax(0, 1fr))'
       },
       transitionTimingFunction: {
         'back-out': 'cubic-bezier(.18,.89,.32,1.28)'

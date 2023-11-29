@@ -11,13 +11,13 @@ const Colorize = (
 };
 
 const Red = (x: number, y: number, time: number) => {
-  return Math.floor(158 + 33 * Math.sin((x * x - y * y) / 300 + time));
+  return Math.floor(216 + 29 * Math.sin((x * x - y * y) / 300 + time));
 };
 
 const Green = (x: number, y: number, time: number) => {
   return Math.floor(
-    167 +
-      36 *
+    217 +
+      34 *
         Math.cos(
           (x * x * Math.cos(time / 4) + y * y * Math.cos(time / 3)) / 300
         )
@@ -26,8 +26,8 @@ const Green = (x: number, y: number, time: number) => {
 
 const Blue = (x: number, y: number, time: number) => {
   return Math.floor(
-    201 +
-      58 *
+    146 +
+      21 *
         Math.sin(
           5 * Math.sin(time / 9) +
             ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100

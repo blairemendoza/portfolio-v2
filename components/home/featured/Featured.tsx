@@ -19,7 +19,7 @@ export default function Featured() {
       variants={cardsContainer}
       initial={"initial"}
       animate={"animate"}
-      className="relative px-4 md:px-8 pb-20 md:pb-28 "
+      className="relative px-4 md:px-8 pb-8"
     >
       <div className="grid grid-cols-10 gap-x-8 gap-y-8 lg:gap-y-24 h-fit mx-auto max-w-[1600px]">
         <WorkCard size="large" className="bg-slate-50 dark:bg-slate-50" href="">
